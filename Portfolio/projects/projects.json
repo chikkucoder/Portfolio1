@@ -1,0 +1,63 @@
+[
+  {
+    "name": "RoyXHotel",
+    "desc": "I built a fully responsive Hotel Website using HTML, CSS, JavaScript, and Bootstrap 5.The site features a clean UI, smooth navigation, and friendly design.",
+    "image": "HOTEL",
+    "category": "mern",
+    "links": {
+       "_comment_view": "https://arshxhotel.vercel.app/",
+      "_comment_code": "https://github.com/ARSHAD-12356/Responsive-Hotel-Website"
+    }
+  },
+  {
+    "name": "RoyXRestro",
+    "desc": "I created a fully responsive Restaurant Website using React.js,dynamic UI and reusable components.The project features an interactive food menu.",
+    "image": "RESTRO",
+    "category": "mern",
+    "links": {
+      "_comment_view": "https://arshxrestro.vercel.app/",
+      "code": "https://github.com/chikkucoder/Smartbite.git"
+    }
+  },
+  {
+    "name": "Food Recipe App",
+    "desc": "I developed a dynamic Food Recipe App using React.js,real-time search and recipe filtering.Users can explore a wide variety of dishes, view ingredients.",
+    "image": "FOOD",
+    "category": "mern",
+    "links": {
+      "_comment_view": "https://myfoodrecepie.vercel.app/",
+      "_comment_code": "https://github.com/ARSHAD-12356/Food-Recipe-App"
+    }
+  },
+  {
+    "name": "TODO APP",
+    "desc": "I built a responsive To-Do App using React.js,help users manage daily tasks efficiently.The app allows users to add, delete, and mark tasks as completed.",
+    "image": "TODO",
+    "category": "mern",
+    "links": {
+      "view": "https://todoweb12.netlify.app/",
+      "code": "https://github.com/chikkucoder/todoapp.git"
+    }
+  },
+  
+  {
+    "name": "E-Commerce",
+    "desc": "I developed a stylish and responsive E-commerce App using HTML, CSS, and JavaScript, focusing on modern UI and smooth user experience..",
+    "image": "E-COMMERCE",
+    "category": "basicweb",
+    "links": {
+      "_comment_view": "https://lovemart.netlify.app/",
+      "_comment_code": "https://app.netlify.com/sites/lovemart/deploys/67d5ca6607d3916c1d51c71a"
+    }
+  },
+  {
+    "name": "Roy Ai Assistant",
+    "desc": "I build a web-based AI Virtual Assistant using HTML, CSS, and JavaScript, designed to respond to user queries through a clean voice-based assistant",
+    "image": "AIASSISTANT",
+    "category": "mern",
+    "links": {
+      "_comment_view": "https://arshxaiassistant.netlify.app/",
+      "_comment_code": "https://app.netlify.com/sites/arshxaiassistant/deploys/679e7044e005b64b246759a1"
+    }
+  }
+]
