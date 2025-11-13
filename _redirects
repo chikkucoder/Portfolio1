@@ -1,0 +1,12 @@
+# Netlify redirects file
+# Handle SPA routing and fallbacks
+
+# Redirect all traffic to index.html for SPA behavior
+/*    /index.html   200
+
+# Handle specific routes
+/projects/*   /projects/index.html   200
+/experience/*   /experience/index.html   200
+
+# Handle 404 errors
+/404   /404.html   200
