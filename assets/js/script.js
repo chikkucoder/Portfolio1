@@ -41,18 +41,50 @@ $(document).ready(function () {
 
     // <!-- emailjs to mail contact form data -->
     $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
-
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
+        event.preventDefault();
+        
+        // Initialize EmailJS with your Public Key
+        emailjs.init("-NOe-ok8tESdeDQ23");
+        
+        // Get form data
+        const formData = {
+            from_name: $("input[name='name']").val(),
+            from_email: $("input[name='email']").val(),
+            phone: $("input[name='phone']").val(),
+            message: $("textarea[name='message']").val()
+        };
+        
+        // Show loading message
+        const submitBtn = $(this).find("button[type='submit']");
+        const originalBtnText = submitBtn.html();
+        submitBtn.html('<i class="fas fa-spinner fa-spin"></i> Sending...').prop('disabled', true);
+        
+        // Send email using EmailJS
+        emailjs.send('service_x4tzat2', 'template_q9mgwbs', formData)
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
+                
+                // Show success message
+                alert("✅ Thank you " + formData.from_name + "! Your message has been sent successfully. I'll get back to you soon!");
+                
+                // Reset form
                 document.getElementById("contact-form").reset();
-                alert("Form Submitted Successfully");
-            }, function (error) {
+                
+                // Reset button
+                submitBtn.html(originalBtnText).prop('disabled', false);
+            })
+            .catch(function (error) {
                 console.log('FAILED...', error);
-                alert("Form Submission Failed! Try Again");
+                
+                // Show error message with WhatsApp alternative
+                if (confirm("❌ Email sending failed! Would you like to contact via WhatsApp instead?")) {
+                    const whatsappMsg = `Hi! I'm ${formData.from_name}%0AEmail: ${formData.from_email}%0APhone: ${formData.phone}%0AMessage: ${formData.message}`;
+                    window.open(`https://wa.me/916202888431?text=${whatsappMsg}`, '_blank');
+                }
+                
+                // Reset button
+                submitBtn.html(originalBtnText).prop('disabled', false);
             });
-        event.preventDefault();
     });
     // <!-- emailjs to mail contact form data -->
 
